@@ -5,9 +5,7 @@ fn trim_me(input: &str) -> &str {
 
 fn compose_me(input: &str) -> String {
     // TODO: Add " world!" to the string! There are multiple ways to do this.
-    let mut s = input.to_string();
-    s.push_str(" world!");
-    s
+    format!("{input} world!")
 }
 
 fn replace_me(input: &str) -> String {
