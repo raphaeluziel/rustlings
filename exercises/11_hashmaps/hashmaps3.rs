@@ -34,12 +34,12 @@ fn build_scores_table(results: &str) -> HashMap<&str, TeamScores> {
         let count1 = scores.entry(team_1_name).or_default();
 
         count1.goals_scored += team_1_score;
-        count1.goals_conceded -= team_2_score;
+        count1.goals_conceded += team_2_score;
 
         let count2 = scores.entry(team_2_name).or_default();
 
         count2.goals_scored += team_2_score;
-        count2.goals_conceded -= team_1_score;
+        count2.goals_conceded += team_1_score;
         
     }
 
